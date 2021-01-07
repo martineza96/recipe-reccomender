@@ -1,1 +1,1 @@
-# recipie-reccomender
+# recipe-reccomender
