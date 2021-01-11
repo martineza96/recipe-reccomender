@@ -1,0 +1,45 @@
+{% extends "base2.html"%}
+{%block content%}
+
+<style>
+    body {
+    background: url('https://www.wallpapertip.com/wmimgs/198-1981549_breakfast-wallpaper-hd.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+
+  </style>
+
+
+
+
+
+<table class='table table-light'>
+    <tr>
+    <th>Name</th>
+    {% for col in df.columns %}
+    <th>{{col}}</th>
+    {% endfor %}
+    </tr>
+    {% for i, row in df.iloc[1:].iterrows() %}
+      <td>{{i}}</td>
+      {% for entry in row %}
+      <td>{{ entry }}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+
+  <form action='/top10' method="post" style="background-color:#ffffff">
+    <p style="color:rgb(0, 0, 0);text-align:center;", text-align= center ßclass='title'>Type dish for description:</p>
+    <p><input type='text' name='top' /></p>
+    <p><input type="submit" value="submit"></p>
+
+  </form>
+
+
+
+
+  {% endblock %}

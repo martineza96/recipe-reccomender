@@ -1,0 +1,41 @@
+{% extends "base2.html"%}
+{%block content%}
+<table class='table table-light'>
+    <tr>
+    <th>#</th>
+    {% for col in df.columns %}
+    <th>{{col}}</th>
+    {% endfor %}
+    </tr>
+    {% for i, row in df.iloc[0:].iterrows() %}
+      <td>{{i}}</td>
+      {% for entry in row %}
+      <td>{{ entry }}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+
+  <form action='/description' method="post" style="background-color:#ffffff">
+    <p style="color:rgb(0, 0, 0);text-align:center;", text-align= center ßclass='title'>Type dish for description:</p>
+    <p><input type='text' name='des' /></p>
+    <p><input type="submit" value="submit"></p>
+
+  </form>
+
+  <style>
+    body {
+    background: url('https://webneel.net/file/images/3-17/18-pani-puri-indian-recipe-photography-by-shirish-sen.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+  </style>
+
+
+
+  
+
+
+  {% endblock %}

@@ -1,0 +1,63 @@
+{% extends "base2.html"%}
+{%block title%}
+Home Page
+{% endblock %}
+
+{%block content%}
+
+<h1>Recipe Recommender</h1>
+
+
+
+<form action='/recipesearch' method='post'>
+  <p>Search for recipes:</p>
+  <p><input type='text' name='ne' /></p>
+  <p><input type="submit" value="submit"></p>
+</form>
+
+
+<form action='/ingredient' method="post">
+  <p>Recipes including ingredient:</p>
+  <p><input type='text' name='ing' /></p>
+  <p><input type="submit" value="submit"></p>
+
+</form>
+
+<form action='/similar' method="post">
+  <p>Recipes with similar nutrition:</p>
+  <p><input type='text' name='sim' /></p>
+  <p><input type="submit" value="submit"></p>
+
+</form>
+
+</form>
+
+<form action='/top10' method="post">
+  <p>Recipies with similar steps:</p>
+  <p><input type='text' name='top' /></p>
+  <p><input type="submit" value="submit"></p>
+
+</form>
+
+
+
+
+
+
+
+<style>
+  body {
+  background: url('https://lh3.googleusercontent.com/proxy/oiqk5AIa2Go-cDA3A5mb-t9VZtobMkjK7SKj7iMjjUSN5xQdNpDZBE30TqqQArf7SGRgoyrxdhLLRWUbYXWtPRBHVu4etix7hS8b63sX4ZEzIiRofOt9mhb1LCk') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+</style>
+
+{% endblock %}
+
+
+
+
+
