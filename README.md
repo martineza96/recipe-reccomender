@@ -1,4 +1,4 @@
 # Recipe Recommender
 
 
-![](Images/about_the_data)
+![](Images/about_the_data.png)
